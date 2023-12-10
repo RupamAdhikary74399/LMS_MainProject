@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Home Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<style>
+
+		.content-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Set the height as needed */
+            background-image: url('/lms.jpg'); /* Set the background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Add other styling as needed */
+        }
+        .overlay-content {
+            position: absolute;
+            top: 50%; /* Adjust as needed */
+            left: 50%; /* Adjust as needed */
+            transform: translate(-50%, -50%); /* Center the content */
+            color: black; /* Set the text color */
+            /* Add other styling for your content */
+        }
+	</style>
+</head>
+
+<body>
+<div class="content-container">
+	<div th:insert="fragments/header :: header"></div>
+	<div class="overlay-content">
+		<div class="container">
+
+			Welcome <span sec:authentication="principal.username"> User</span>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
