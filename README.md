@@ -1,2 +1,2 @@
 # LMS_MainProject
-Lirary management system
+Library management system
